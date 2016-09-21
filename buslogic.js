@@ -9,7 +9,6 @@ var config = {
 
 var database = firebase.database();
 
-
 // 2. Button for adding Bus Lines
 $("#addBusBtn").on("click", function(){
 
@@ -27,15 +26,15 @@ $("#addBusBtn").on("click", function(){
 		rate: busRate
 	};
 
-	var today = new Date();
-	var thisMonth = today.getMonth() + 1;
-	var thisDate = today.getDate();
-	var thisYear = today.getFullYear();
+// 	var today = new Date();
+// 	var thisMonth = today.getMonth() + 1;
+// 	var thisDate = today.getDate();
+// 	var thisYear = today.getFullYear();
 
-// DATE STRING //
+// // DATE STRING //
 
-  var dateString = "";
-  var dateString = dateString.concat(thisMonth, "/", thisDate, "/", thisYear);
+//   var dateString = "";
+//   var dateString = dateString.concat(thisMonth, "/", thisDate, "/", thisYear);
 
 
 	// Uploads employee data to the database
@@ -83,13 +82,36 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
 	// Calculate the months worked using hardconre math
 	// To calculate the months worked
 	var arrival = moment().diff(moment.unix(busStart, 'X'), "mm");
-	console.log(arrival);
+	//console.log(arrival);
 
 
-var tFrequency = 3;
-		var firstTime = "03:30"; // Time is 3:30 AM
+var bRate = busRate;
+var firstTime = busStart;
+var hours = Math.floor((firstTime/360000)%24);
+var minutes = Math.floor((firstTime%360000)/6000);
+firstTime = hours + ":" + minutes;
+ // Time is 3:30 AM
 		// have this where the user's input will populate this, leaving open with "".
-		
+
+var firstTimeConverted = moment(firstTime,"hh:mm").subtract(1, "years");
+	console.log(firstTimeConverted);
+
+var currentTime = moment();
+	console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+
+var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+	console.log("DIFFERENCE IN TIME: " + diffTime);
+
+var tRemainder = diffTime % bRate;
+	console.log(tRemainder);
+
+// Minute Until Train
+var tMinutesTillBus = bRate - tRemainder;
+	console.log("MINUTES TILL BUS: " + tMinutesTillBus);
+
+// Next Train
+var nextBus = moment().add(tMinutesTillBus, "minutes")
+	console.log("ARRIVAL TIME: " + moment(nextBus).format("hh:mm"));
 	// Calculate the total billed rate
 	// var empBilled = empMonths * empRate;
 	// console.log(empBilled);

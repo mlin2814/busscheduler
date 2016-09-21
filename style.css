@@ -1,0 +1,234 @@
+body {
+    margin: 10px;
+    padding: 0;
+    background: #bef2dc;
+    font-size: 25px;
+    line-height: 160%;
+    font-family: "Georgia",Times New Roman,Times,serif;
+    color: #000;
+    text-align: center;
+}
+
+h1 {
+    padding: 10px;
+    color: #c79db4;
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    padding: 10px;
+    color: #c79db4;
+    margin: 0;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;  
+}
+
+section {
+    padding: 10PX;
+    margin-bottom: 10PX;
+}
+
+.container {
+    width: 960px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: auto;
+    left: 90px;
+    right: 90px;
+    float: right;
+}
+
+#header {
+    position: inherit;
+    background: #4aaaa5;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    top: 0;
+    left: 90px;
+    width: 400px;
+    height: 70px;
+    color: #777777;
+    font: 'Georgia', Times, Times New Roman, serif;
+}
+
+#image {
+    float: left;
+    margin-top: 30px;
+}
+
+#navigation {
+    position: relative;
+    left: 750px;
+    float: right;
+    color: #eee;
+    text-align: center;
+    margin: 5px;
+    width: 250px;
+    height: 55px;
+    bottom: 72px;
+    font: 'Georgia', Times, Times New Roman, serif;
+}
+
+#connection {
+    position: absolute;
+    left: 840px;
+    right: 50px;
+    float: right;
+    color: #eee;
+    text-align: center;
+    margin: 0;
+    width: 250px;
+    height: 150px;
+    font: 'Georgia', Times, Times New Roman, serif;
+    font-size: 16px;
+    color: #4aaaa5; 
+    background: #FFFFFF;  
+}
+
+#connection-image {
+    float: center;
+    width: 50px;
+    height: 50px;
+}
+
+#background {
+    position: relative;
+    background: #4aaaa5;
+    padding: 0;
+    top: 31px;
+    left: 0;
+    right: 0;
+}
+
+#MainBody {
+    width: 650px;
+    height: 20000px;
+    margin-top: 65px;
+    margin-left: 90px;
+    background-color: #03C;
+    color: 000000;
+    float: center;
+    position: inherit;
+}
+
+#portfolio {
+    width: 10px;
+    height: 10px;
+    position: inherit;
+    color: #4aaaa5;
+    background-color: #666;
+    float: center; 
+    clear: left; 
+}
+
+#RPG {
+    width: 10px;
+    height: 10px;
+    position: inherit;
+    color: #4aaaa5;
+    background-color: #666; 
+    float: right;
+    clear: right;
+}
+
+#triviagame {
+    width: 10px;
+    height: 10px;
+    position: inherit;
+    color: #4aaaa5;
+    background-color: #666; 
+    float: left;
+    clear: left;
+}
+
+#rutgersinfowidget {
+    width: 10px;
+    height: 10px;
+    position: inherit;
+    color: #4aaaa5;
+    background-color: #666; 
+    float: right;
+    clear: right;
+}
+
+#RockPaperScissors  {
+    width: 10px;
+    height: 10px;
+    position: inherit;
+    color: #4aaaa5;
+    background-color: #666; 
+    float: left;
+    clear: left;
+}
+
+#left {
+    position: relative;
+    top: 50px;
+    padding: 40px;
+    float: left;
+    width: 90%;
+    background: #666;
+    color: #fff;
+}
+
+#left2 {
+    float: left;
+    width: 50%;
+    background: #666;
+    color: #fff;
+}
+
+#middle {
+    float: center;
+    width: 33.3%;
+    background: #888;
+    color: #fff;
+}
+
+#Sidebar {
+    float: right;
+    width: 100px;
+    height: 300px;
+    background-color: #0C0;
+}
+
+#full {
+    float: center;    
+    width: 100%;
+    background: #eee;
+    overflow: auto;
+}
+
+#division {
+    background: #6ea3da;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#footer {
+  right: 0;
+  bottom: 0;
+  left: 165px;
+  padding: 1px;
+  background-color: #efefef;
+  text-align: center;
+  position: relative;
+  float: center;
+  clear: both;
+}
+
+aside {
+    float: left;
+    width: 33.3%;
+    margin-left: 30px;
+    padding: 20px;
+    height: 200px;
+    background: #fff;
+    border: 1px solid #eee;
+}
