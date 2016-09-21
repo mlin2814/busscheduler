@@ -85,53 +85,58 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
 	var arrival = moment().diff(moment.unix(busStart, 'X'), "mm");
 	console.log(arrival);
 
+
+var tFrequency = 3;
+		var firstTime = "03:30"; // Time is 3:30 AM
+		// have this where the user's input will populate this, leaving open with "".
+		
 	// Calculate the total billed rate
 	// var empBilled = empMonths * empRate;
 	// console.log(empBilled);
 
-    var busFirstArrivalTime = value.busStart;
+//     var busFirstArrivalTime = value.busStartPretty;
     
-// VARIABLE CALCULATIONS //
+// // VARIABLE CALCULATIONS //
 
-    var busNextDeparture;
-    var minutesAway;
+//     var busNextDeparture;
+//     var minutesAway;
 
-// MOMENT //
+// // MOMENT //
 
-    var convertedDate = moment(new Date(busFirstArrivalTime));
+//     var convertedDate = moment(new Date(busFirstArrivalTime));
     
-// MINUTES AWAY //
+// // MINUTES AWAY //
 
-    var minuteDiffFirstArrivalToNow = moment(convertedDate).diff( moment(), "minutes")*(-1);
+//     var minuteDiffFirstArrivalToNow = moment(convertedDate).diff( moment(), "minutes")*(-1);
 
-      // Check for New Train Times //
+//       // Check for New Train Times //
       
-      if(minuteDiffFirstArrivalToNow <= 0){
+//       if(minuteDiffFirstArrivalToNow <= 0){
 
-        // Current Departure //
+//         // Current Departure //
 
-        minutesAway = moment(convertedDate).diff( moment(), "minutes");
+//         minutesAway = moment(convertedDate).diff( moment(), "minutes");
 
-        // Next Depature Time //
+//         // Next Depature Time //
 
-        busNextDepartureDate = convertedDate;
+//         busNextDepartureDate = convertedDate;
 
-      }
+//       }
 
-      else{
+//       else{
 
-        // Next Train Departure //
+//     	// Next Train Departure //
 
-        busMinutesAway = busRate - (minuteDiffFirstArrivalToNow % busRate);
+//         busMinutesAway = busRate - (minuteDiffFirstArrivalToNow % busRate);
 
-        // Next Departure Time //
+//         // Next Departure Time //
 
-        var trainNextDepartureDate = moment().add(trainMinutesAway, 'minutes');
-      }
+//         var busNextDepartureDate = moment().add(busMinutesAway, 'minutes');
+//       }
 
-// AM/PM //
+// // AM/PM //
 
-    trainNextDeparture = trainNextDepartureDate.format("hh:mm A");
+//     busNextDeparture = busNextDepartureDate.format("hh:mm A");
 
 	// Add each train's data into the table
 	$("#busTable > tbody").append("<tr><td>" + busName + "</td><td>" + busPlace + "</td><td>" + busStartPretty + "</td><td>" + arrival + "</td><td>" + busRate + "</td><td>");
