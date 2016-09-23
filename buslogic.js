@@ -26,18 +26,6 @@ $("#addBusBtn").on("click", function(){
 		rate: busRate
 	};
 
-// 	var today = new Date();
-// 	var thisMonth = today.getMonth() + 1;
-// 	var thisDate = today.getDate();
-// 	var thisYear = today.getFullYear();
-
-// // DATE STRING //
-
-//   var dateString = "";
-//   var dateString = dateString.concat(thisMonth, "/", thisDate, "/", thisYear);
-
-
-	// Uploads employee data to the database
 	database.ref().push(newBus);
 
 	// Logs everything to console
@@ -112,55 +100,7 @@ var tMinutesTillBus = bRate - tRemainder;
 // Next Train
 var nextBus = moment().add(tMinutesTillBus, "minutes")
 	console.log("ARRIVAL TIME: " + moment(nextBus).format("hh:mm"));
-	// Calculate the total billed rate
-	// var empBilled = empMonths * empRate;
-	// console.log(empBilled);
 
-//     var busFirstArrivalTime = value.busStartPretty;
-    
-// // VARIABLE CALCULATIONS //
-
-//     var busNextDeparture;
-//     var minutesAway;
-
-// // MOMENT //
-
-//     var convertedDate = moment(new Date(busFirstArrivalTime));
-    
-// // MINUTES AWAY //
-
-//     var minuteDiffFirstArrivalToNow = moment(convertedDate).diff( moment(), "minutes")*(-1);
-
-//       // Check for New Train Times //
-      
-//       if(minuteDiffFirstArrivalToNow <= 0){
-
-//         // Current Departure //
-
-//         minutesAway = moment(convertedDate).diff( moment(), "minutes");
-
-//         // Next Depature Time //
-
-//         busNextDepartureDate = convertedDate;
-
-//       }
-
-//       else{
-
-//     	// Next Train Departure //
-
-//         busMinutesAway = busRate - (minuteDiffFirstArrivalToNow % busRate);
-
-//         // Next Departure Time //
-
-//         var busNextDepartureDate = moment().add(busMinutesAway, 'minutes');
-//       }
-
-// // AM/PM //
-
-//     busNextDeparture = busNextDepartureDate.format("hh:mm A");
-
-	// Add each train's data into the table
 	$("#busTable > tbody").append("<tr><td>" + busName + "</td><td>" + busPlace + "</td><td>" + busStartPretty + "</td><td>" + arrival + "</td><td>" + busRate + "</td><td>");
 
 });
